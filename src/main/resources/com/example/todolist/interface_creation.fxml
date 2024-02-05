@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:controller="com.example.todolist.InterfaceCreation"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" styleClass="root">
+    <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+    <Text id="welcomeText" text="ToDoList"
+          GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+    <Label text="User Name:"
+           GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="textname"
+            GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Label text="Password:"
+           GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <PasswordField fx:id="passwordField1" promptText="Password"
+                   GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <PasswordField fx:id="passwordField2" promptText="Confirm Password"
+                   GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    <HBox spacing="10" alignment="bottom_right"
+          GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <Button fx:id="Save" text="Save"
+                onAction="#Save"/>
+        <Button fx:id="Cancel" text="Cancel"
+                onAction="#Cancel"/>
+        <Button fx:id="showpassword" text="show password"
+                onAction="#showPassword"/>
+    </HBox>
+    <stylesheets>
+        <URL value="@frontAcceuil.css"/>
+    </stylesheets>
+</GridPane>

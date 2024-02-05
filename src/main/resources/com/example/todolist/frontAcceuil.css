@@ -1,0 +1,27 @@
+.button {
+    -fx-text-fill: white;
+    -fx-font-family: "Jost";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#517FF6, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+.button:hover {
+    -fx-background-color: linear-gradient(#2A5058, #517FF6);
+}
+
+.root{
+    -fx-background-color: #C0C0C0;
+}
+.label{
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-fill: #517FF6;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255,0.5), 0,0,0,1);
+}
+
+#welcomeText {
+    -fx-font-size: 50px;
+    -fx-font-family: "Jost";
+    -fx-fill: #517FF6;
+    -fx-effet: innershadow( three-pass-box, rgba(0,0,0,7) , 6, 0.0, 0, 2);
+}
