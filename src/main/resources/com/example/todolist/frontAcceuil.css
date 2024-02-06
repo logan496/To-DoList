@@ -14,14 +14,15 @@
     -fx-background-color: linear-gradient(#517FF6, #C0C0C0);
 }
 .label{
-    -fx-font-size: 12px;
-    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-font-weight: normal;
 
 }
 
 #welcomeText {
     -fx-font-size: 50px;
     -fx-font-family: "Jost";
+    -fx-font-weight: bold;
     -fx-fill: white;
     -fx-effet: innershadow( three-pass-box, rgba(0,0,0,7) , 6, 0.0, 0, 2);
 }

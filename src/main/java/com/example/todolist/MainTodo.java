@@ -3,7 +3,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import java.sql.*;
+
 
 public class MainTodo extends Application {
 

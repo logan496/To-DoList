@@ -11,7 +11,7 @@
 <GridPane fx:controller="com.example.todolist.InterfaceCreation"
           xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" styleClass="root">
     <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
-    <Text id="welcomeText" text="ToDoList"
+    <Text id="welcomeText" text="To-Do List"
           GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
     <Label text="User Name:"
            GridPane.columnIndex="0" GridPane.rowIndex="1"/>
