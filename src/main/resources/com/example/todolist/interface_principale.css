@@ -1,0 +1,48 @@
+#Addnew {
+    -fx-text-fill: black;
+    -fx-font-family: "Jost";
+    -fx-font-weight: normal;
+    -fx-background-radius: 12;
+    -fx-background-color: white;
+}
+
+#All{
+    -fx-text-fill: white;
+    -fx-font-family: "Jost";
+    -fx-font-weight: normal;
+    -fx-background-radius: 12;
+    -fx-background-color: #517FF6;
+}
+
+#Todo{
+    -fx-text-fill: black;
+    -fx-font-family: "Jost";
+    -fx-font-weight: normal;
+    -fx-background-radius: 12;
+    -fx-background-color: white;
+}
+
+#completed{
+    -fx-text-fill: black;
+    -fx-font-family: "Jost";
+    -fx-font-weight: normal;
+    -fx-background-radius: 12;
+    -fx-background-color: white;
+}
+
+#todolist{
+    -fx-text-fill: bold;
+    -fx-font-family: "Jost";
+    -fx-font-size: 45px;
+    -fx-font-weight: bold;
+    -fx-fill: white;
+}
+
+.root{
+    -fx-background-color: linear-gradient(#517FF6, #141454);
+}
+
+.grid{
+    -fx-background-color: rgba(255, 255, 255, 0.88);
+    -fx-background-radius: 20;
+}
