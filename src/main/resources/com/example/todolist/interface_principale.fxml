@@ -3,22 +3,23 @@
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Text?>
-
-
 <?import javafx.geometry.Insets?>
+
 <AnchorPane prefHeight="400.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.todolist.InterfacePrincipale">
 
     <Button fx:id="Addnew" layoutX="30.0" layoutY="74.0" mnemonicParsing="false" onAction="#ajoutertaches" prefHeight="33.0" prefWidth="179.0" text="Add a new to-do" />
     <Button fx:id="All" layoutX="382.0" layoutY="74.0" mnemonicParsing="false" onAction="#toutafficher" prefHeight="33.0" prefWidth="55.0" text="All" />
     <Button fx:id="Todo" layoutX="447.0" layoutY="74.0" mnemonicParsing="false" onAction="#afficherTodo" prefHeight="33.0" prefWidth="72.0" text="To-do" />
     <Button fx:id="completed" layoutX="529.0" layoutY="74.0" mnemonicParsing="false" onAction="#affichertachescompletees" prefHeight="33.0" prefWidth="91.0" text="Completed" />
+
     <Text fx:id="todolist" layoutX="231.0" layoutY="46.0" text="To-Do List" />
+
    <GridPane hgap="45" vgap="10" layoutX="31.0" layoutY="122.0" prefHeight="255.0" prefWidth="597.0" styleClass="grid">
+
        <padding><Insets top="10" right="25" bottom="25" left="25"/></padding>
+
        <Text text="Task" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
        <Text text="Description" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.valignment="CENTER"/>
        <Text text="Category" GridPane.columnIndex="2" GridPane.rowIndex="0" GridPane.valignment="CENTER"/>
@@ -27,7 +28,9 @@
        <Text text="Fullfillment" GridPane.columnIndex="5" GridPane.rowIndex="0" GridPane.valignment="CENTER"/>
 
    </GridPane>
+
     <stylesheets>
         <URL value="@interface_principale.css" />
     </stylesheets>
+
 </AnchorPane>

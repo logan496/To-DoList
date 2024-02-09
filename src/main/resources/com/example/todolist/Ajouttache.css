@@ -1,0 +1,43 @@
+#addnew{
+    -fx-text-fill: bold;
+    -fx-font-family: "Jost";
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-fill: white;
+}
+
+.root{
+    -fx-background-color: linear-gradient(#517FF6, #141454);
+}
+
+.Grip{
+    -fx-background-color: rgba(255, 255, 255, 0.88);
+    -fx-background-radius: 12;
+}
+
+.button{
+    -fx-text-fill: white;
+    -fx-font-family: "Jost";
+    -fx-font-weight: normal;
+    -fx-background-radius: 8;
+    -fx-background-color: #517FF6;
+}
+
+#comboBox{
+    -fx-text-fill: white;
+    -fx-font-family: "Jost";
+    -fx-font-weight: normal;
+    -fx-background-color: #FFFF;
+    -fx-border-raduis: 0;
+}
+
+.slider{
+    -fx-control-inner-background: white;
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+}
+
+.text-field{
+    -fx-border-radius: 0;
+    -fx-background-color: white;
+}

@@ -1,14 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.todolist.AjoutTache"
-            prefHeight="400.0" prefWidth="680.0">
+<?import javafx.scene.control.Slider?>
+<AnchorPane prefHeight="400.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.todolist.AjoutTache">
+    <Text fx:id="addnew" layoutX="43.0" layoutY="95.0" text="Add new To-do" />
+
+    <Button fx:id="save" layoutX="415.0" layoutY="341.0" onAction="#savetask" prefHeight="25.0" prefWidth="113.0" text="Save" />
+    <Button fx:id="cancel" layoutX="535.0" layoutY="341.0" onAction="#canceladd" prefHeight="25.0" prefWidth="113.0" text="Cancel" />
+
+    <GridPane hgap="10" layoutX="20.0" layoutY="114.0" prefHeight="218.0" prefWidth="651.0" styleClass="Grip" vgap="10">
+
+    <padding><Insets bottom="25" left="25" right="25" top="20" /></padding>
+
+        <Label text="Name" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label prefHeight="17.0" prefWidth="68.0" text="Description" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+        <TextField prefHeight="64.0" prefWidth="261.0" promptText="a short description of the task.can be omitted" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Category" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField promptText="e.g: school, work, housework" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label text="Date" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <DatePicker promptText="dd/mm/yy" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <Label text="Time" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <Spinner fx:id="spinnerHours" initialValue="0" max="23" min="0" prefHeight="25.0" prefWidth="59.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+        <Label text="Priority" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <ComboBox fx:id="comboBox" GridPane.columnIndex="3" GridPane.rowIndex="0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="High" />
+                    <String fx:value="Medium" />
+                    <String fx:value="Low" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <Label prefHeight="17.0" prefWidth="70.0" text="Fullfillment" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Slider fx:id="slider" prefWidth="200" min="0" max="100" value="50" GridPane.columnIndex="3" GridPane.rowIndex="1" onMouseReleased="#slidervalue"/>
+        <Label fx:id="valueLabel" prefWidth="70.0" prefHeight="17.0" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+
+    </GridPane>
+
+    <stylesheets>
+        <URL value="@Ajouttache.css"/>
+    </stylesheets>
 
 </AnchorPane>

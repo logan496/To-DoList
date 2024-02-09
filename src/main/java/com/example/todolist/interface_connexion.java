@@ -26,7 +26,20 @@ public class interface_connexion {
     static  String USER = "root";
     static String password = "inconnu_X2027";
 
+    public void connexion_reussie(){
+        try{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("interface_principale.fxml"));
 
+            Stage secondStage = new Stage();
+            secondStage.setTitle("To-do List");
+            secondStage.setScene(new Scene(loader.load()));
+            secondStage.show();
+        }catch (Exception e){
+            System.out.println(e);
+        }
+        Stage stage = (Stage) submit.getScene().getWindow();
+        stage.close();
+    }
     public void creationCompte(ActionEvent actionEvent) {
         try{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("interface_creation.fxml"));
