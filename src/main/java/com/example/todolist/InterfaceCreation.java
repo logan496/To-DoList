@@ -1,7 +1,6 @@
 package com.example.todolist;
 
 import javafx.animation.PauseTransition;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -11,12 +10,10 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
 import java.sql.*;
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 
 public class InterfaceCreation {
 
@@ -54,6 +51,7 @@ public class InterfaceCreation {
         different.setContentText("You should confirm your password");
         different.showAndWait();
     }
+
     public void verifications(){
         String characteres = "^(?=.*[A-Z])(?=.*[!@#$%^&_]).{8,}$";
         Pattern pattern = Pattern.compile(characteres);
@@ -79,8 +77,8 @@ public class InterfaceCreation {
         }else{
             Save(textname.getText(), passwordField1.getText());
         }
-
     }
+
     public void Save(String name, String password1) {
         String requete = "INSERT INTO utilisateur(password, nom) VALUES(?, ?)";
         try{
