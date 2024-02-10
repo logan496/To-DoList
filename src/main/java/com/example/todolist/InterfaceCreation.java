@@ -31,7 +31,21 @@ public class InterfaceCreation {
     static  String USER = "root";
     static String password = "inconnu_X2027";
 
-    //save les infos utilisateurs dans la BD
+    public void lancementInterfacePrincipale(){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("interface_principale.FXML"));
+            Scene scene = new Scene(loader.load());
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setTitle("To-Do List");
+            stage.show();
+        }catch (Exception e){
+            Alert erreur_chargement = new Alert(Alert.AlertType.ERROR);
+            erreur_chargement.setHeaderText("System Error");
+            erreur_chargement.setContentText(e.getMessage());
+            erreur_chargement.showAndWait();
+        }
+    }
     public void erreur_username(){
         Alert alert_name =  new Alert(Alert.AlertType.ERROR);
         alert_name.setHeaderText("USER name error");
@@ -76,6 +90,7 @@ public class InterfaceCreation {
             }
         }else{
             Save(textname.getText(), passwordField1.getText());
+            lancementInterfacePrincipale();
         }
     }
 
