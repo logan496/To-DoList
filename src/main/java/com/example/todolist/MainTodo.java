@@ -16,7 +16,7 @@ public class MainTodo extends Application {
     @Override
     public void start(Stage Primarystage) {
         try {
-            FXMLLoader loader = new FXMLLoader(MainTodo.class.getResource("interface_connexion.fxml"));
+            FXMLLoader loader = new FXMLLoader(MainTodo.class.getResource("interface_creation.fxml"));
             Scene scene = new Scene(loader.load());
             Primarystage.setScene(scene);
         } catch (Exception e) {
@@ -24,6 +24,7 @@ public class MainTodo extends Application {
         }
         Primarystage.setWidth(width);
         Primarystage.setHeight(height);
+        Primarystage.setResizable(false);
         Primarystage.setTitle("TodoList");
         Primarystage.show();
     }
