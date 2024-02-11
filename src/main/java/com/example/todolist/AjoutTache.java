@@ -20,6 +20,7 @@ public class AjoutTache {
     private TextField category;
     @FXML
     private DatePicker ges_date;
+
     @FXML
     private Label valueLabel;
     @FXML
@@ -51,7 +52,6 @@ public class AjoutTache {
                 return Integer.parseInt(s);
             }
         });
-
     }
     public void slidervalue(){
         slider.setShowTickLabels(true);
@@ -61,17 +61,27 @@ public class AjoutTache {
             @Override
             public void changed(ObservableValue<? extends Number> observableValue, Number oldValue, Number newValue) {
                 valueLabel.setText(String.format("%.2f", newValue));
-                double value = slider.getValue();
+
             }
         });
     }
     public void savetask(ActionEvent actionEvent) {
         String sql = "INSERT INTO infos_taches(name, fullfillment, description, category, date, TIME, priority) VALUES" +
-                "(?, ?, ?, ?, ?, ?, ?";
+                "(?, ?, ?, ?, ?, ?, ?)";
+        slidervalue();
+        String valeur = (String) comboBox.getValue();
+        //Date date = Date.valueOf(ges_date.getValue());
+        double slider_value = slider.getValue();
         try{
             Connection conn = DriverManager.getConnection(URL, USER, password);
             PreparedStatement stmt = conn.prepareStatement(sql);
-            //ajout des variables à sauvegarder dans la bd
+            stmt.setString(1, textnom.getText());
+            stmt.setDouble(2, slider_value);
+            stmt.setString(3, textdescription.getText());
+            stmt.setString(4, category.getText());
+            stmt.setDate(5, Date.valueOf(ges_date.getValue()));
+            stmt.setInt(6, spinnerHours.getValue());
+            stmt.setString(7, valeur);
             stmt.executeUpdate();
         }catch (SQLException e){
             Alert echec_enregistrement = new Alert(Alert.AlertType.ERROR);
@@ -79,7 +89,10 @@ public class AjoutTache {
             echec_enregistrement.setContentText("échec de l'enregistrement des donées");
             echec_enregistrement.showAndWait();
         }
+        System.out.println("Requête réussie");
     }
+
+
 
     public void canceladd(ActionEvent actionEvent) {
         Stage stage = (Stage) cancel.getScene().getWindow();
@@ -97,8 +110,5 @@ public class AjoutTache {
             erreur_chargement.setContentText(e.getMessage());
             erreur_chargement.showAndWait();
         }
-
     }
-
-
 }
