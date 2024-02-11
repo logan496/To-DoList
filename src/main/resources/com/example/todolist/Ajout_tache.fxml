@@ -27,15 +27,16 @@
     <padding><Insets bottom="25" left="25" right="25" top="20" /></padding>
 
         <Label text="Name" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-        <TextField GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="textnom"/>
 
         <Label prefHeight="17.0" prefWidth="68.0" text="Description" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.valignment="TOP" />
-        <TextField prefHeight="64.0" prefWidth="261.0" promptText="a short description of the task.can be omitted" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField prefHeight="64.0" prefWidth="261.0" promptText="a short description of the task.can be omitted" GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="textdescription"/>
 
         <Label text="Category" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-        <TextField promptText="e.g: school, work, housework" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField promptText="e.g: school, work, housework" GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="category"/>
+
         <Label text="Date" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-        <DatePicker promptText="dd/mm/yy" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <DatePicker promptText="dd/mm/yy" GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="ges_date" />
 
         <Label text="Time" GridPane.columnIndex="0" GridPane.rowIndex="4" />
         <Spinner fx:id="spinnerHours" initialValue="0" max="23" min="0" prefHeight="25.0" prefWidth="59.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />

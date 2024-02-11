@@ -2,8 +2,17 @@
     -fx-text-fill: black;
     -fx-font-family: "Jost";
     -fx-font-weight: normal;
-    -fx-background-radius: 12;
+    -fx-background-radius: 12px;
     -fx-background-color: white;
+
+}
+#Addnew:hover{
+    -fx-background-color: #D3D3D3FF;
+    -fx-text-fill: black;
+}
+#Addnew:pressed{
+    -fx-background-color: rgb(128, 128, 128);
+    -fx-background-radius: 12px;
 }
 
 #All{
@@ -13,7 +22,12 @@
     -fx-background-radius: 12;
     -fx-background-color: #517FF6;
 }
-
+#All:hover{
+    -fx-background-color: #3458B2;
+}
+#All:pressed{
+    -fx-background-color: #1F3C85;
+}
 #Todo{
     -fx-text-fill: black;
     -fx-font-family: "Jost";
@@ -21,7 +35,14 @@
     -fx-background-radius: 12;
     -fx-background-color: white;
 }
-
+#Todo:hover{
+    -fx-background-color: #D3D3D3FF;
+    -fx-text-fill: black;
+}
+#Todo:pressed{
+    -fx-background-color: rgb(128, 128, 128);
+    -fx-background-radius: 12px;
+}
 #completed{
     -fx-text-fill: black;
     -fx-font-family: "Jost";
@@ -29,7 +50,14 @@
     -fx-background-radius: 12;
     -fx-background-color: white;
 }
-
+#completed:hover{
+    -fx-background-color: #D3D3D3FF;
+    -fx-text-fill: black;
+}
+#completed:pressed{
+    -fx-background-color: rgb(128, 128, 128);
+    -fx-background-radius: 12px;
+}
 #todolist{
     -fx-text-fill: bold;
     -fx-font-family: "Jost";
@@ -46,3 +74,4 @@
     -fx-background-color: rgba(255, 255, 255, 0.88);
     -fx-background-radius: 20;
 }
+

@@ -10,8 +10,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.sql.*;
 import java.util.Objects;
-import java.util.Timer;
-import java.util.TimerTask;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
@@ -105,5 +103,4 @@ public class interface_connexion {
             System.out.println(e);
         }
     }
-
 }

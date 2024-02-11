@@ -16,7 +16,7 @@ public class MainTodo extends Application {
     @Override
     public void start(Stage Primarystage) {
         try {
-            FXMLLoader loader = new FXMLLoader(MainTodo.class.getResource("interface_creation.fxml"));
+            FXMLLoader loader = new FXMLLoader(MainTodo.class.getResource("interface_connexion.fxml"));
             Scene scene = new Scene(loader.load());
             Primarystage.setScene(scene);
         } catch (Exception e) {

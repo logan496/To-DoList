@@ -91,6 +91,8 @@ public class InterfaceCreation {
         }else{
             Save(textname.getText(), passwordField1.getText());
             lancementInterfacePrincipale();
+            Stage stage = (Stage) Save.getScene().getWindow();
+            stage.close();
         }
     }
 
